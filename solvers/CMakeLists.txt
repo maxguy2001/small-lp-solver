@@ -1,0 +1,1 @@
+add_library(solvers primal_tableau.cpp primal_tableau.hpp)
