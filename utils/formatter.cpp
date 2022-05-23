@@ -53,6 +53,7 @@ void Formatter::makeFormattedMatrix(){
 
   newfile.close();
 
+
 //convert string into vector of strings
   std::stringstream ss(matstring);
   std::string s;

@@ -1,0 +1,5 @@
+number rows
+number columns
+matrix_elements
+vector
+objective function (optional)

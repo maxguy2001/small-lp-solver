@@ -43,5 +43,9 @@ namespace solvers{
 
   std::vector<int32_t> vector_;
 
+  std::vector<int32_t> column_labels_;
+
+  std::vector<int32_t> basic_variables_;
+
 };
 }
