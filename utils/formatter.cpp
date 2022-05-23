@@ -180,6 +180,14 @@ void Formatter::makeFormattedVector(){
   }
 }
 
+void Formatter::clearAll(){
+  formattedMatrix_.clear();
+  formattedVector_.clear();
+  path_to_problem_file_.clear();
+  kNumCols_ = 0;
+  kNumRows_ = 0;
+}
+
 void Formatter::formatFullProblem(const std::string path_to_problem_file, const std::string solver){
   path_to_problem_file_ = path_to_problem_file;
   if(solver == "primal_tableau"){

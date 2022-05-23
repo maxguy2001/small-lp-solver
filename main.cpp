@@ -19,6 +19,11 @@ void formatProblem(const std::string path_to_problem, const std::string solver){
   for(size_t i = 0; i < vec.size(); ++i){
     //std::cout << vec.at(i) << std::endl;
   }
+}
+
+void checkSolver(const std::string path_to_problem){
+  solvers::Primal primal;
+  primal.solve(path_to_problem);
 
 }
 
@@ -26,6 +31,8 @@ int main(){
   const std::string problem_path = "../problems/problem2.txt";
   const std::string solver = "primal_tableau";
   formatProblem(problem_path, solver);
+  checkSolver(problem_path);
+
   return 0;
 }
 

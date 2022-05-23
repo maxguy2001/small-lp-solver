@@ -29,6 +29,12 @@ namespace solvers{
  */
   bool checkOptimal();
 
+  /**
+ * @brief checks if solution is optimal
+ * 
+ */
+  void initialiseBasis();
+
 /**
  * @brief formats and solves problem
  * 

@@ -8,10 +8,11 @@ class Formatter{
   public:
   Formatter();
 
-  int kNumRows_ = 100;
-  int kNumCols_ = 100;
+  int kNumRows_;
+  int kNumCols_;
 
   void formatFullProblem(const std::string path_to_problem_file, const std::string solver);
+  void clearAll();
 
 
   std::vector<std::vector<int32_t>> formattedMatrix_;
