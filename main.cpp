@@ -7,8 +7,8 @@
 void formatProblem(const std::string path_to_problem, const std::string solver){
   utils::Formatter format;
   format.formatFullProblem(path_to_problem, solver);
-  std::vector<std::vector<int32_t>> mat = format.formattedMatrix_;
-  std::vector<int32_t> vec = format.formattedVector_;
+  std::vector<std::vector<float>> mat = format.formattedMatrix_;
+  std::vector<float> vec = format.formattedVector_;
 
   for(size_t i = 0; i < mat.size(); ++i){
     for(size_t j = 0; j < mat.at(1).size(); ++j){

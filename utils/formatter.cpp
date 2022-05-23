@@ -64,13 +64,13 @@ void Formatter::makeFormattedMatrix(){
   }
 
 //convert vector of strings into array of ints and reshape to 2d
-  int32_t mat1d[matstringvec.size()];
+  float mat1d[matstringvec.size()];
 
   for(size_t i = 0; i < matstringvec.size(); ++i){
-    mat1d[i] = static_cast<int32_t>(atoi(matstringvec.at(i).c_str()));
+    mat1d[i] = static_cast<float>(atoi(matstringvec.at(i).c_str()));
   }
 
-  int mat2d[kNumRows_][kNumCols_];
+  float mat2d[kNumRows_][kNumCols_];
 
   for(size_t i = 0; i < kNumCols_; ++i){
     for(size_t j = 0; j < kNumRows_; ++j){
@@ -80,7 +80,7 @@ void Formatter::makeFormattedMatrix(){
   }
 
 //store values from 2d array as 2d vector class attribute
-  std::vector<int32_t> temp_vec;
+  std::vector<float> temp_vec;
 
   for(size_t i = 0; i < kNumCols_; ++i){
     for(size_t j = 0; j < kNumRows_; ++j){
@@ -128,11 +128,11 @@ void Formatter::addObjectiveFunction(){
     obj_string_vec.push_back(s);
   }
 
-  std::vector<int32_t> objective_vector;
+  std::vector<float> objective_vector;
 
   //switch to int32_t and add to vector
   for(size_t i = 0; i < obj_string_vec.size(); ++i){
-    int32_t element = static_cast<int32_t>(atoi(obj_string_vec.at(i).c_str()));
+    float element = static_cast<float>(atoi(obj_string_vec.at(i).c_str()));
     objective_vector.push_back(element);
   }
 
@@ -175,7 +175,7 @@ void Formatter::makeFormattedVector(){
 
 //convert vector of strings into vector of int32_t and assign to class attribute
   for(size_t i = 0; i < stringvec.size(); ++i){
-    int32_t element = static_cast<int32_t>(atoi(stringvec.at(i).c_str()));
+    float element = static_cast<float>(atoi(stringvec.at(i).c_str()));
     formattedVector_.push_back(element);
   }
 }

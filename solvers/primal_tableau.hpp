@@ -30,7 +30,7 @@ namespace solvers{
   bool checkOptimal();
 
   /**
- * @brief checks if solution is optimal
+ * @brief initialised basis variables
  * 
  */
   void initialiseBasis();
@@ -45,9 +45,9 @@ namespace solvers{
 
   std::string path_to_problem_file_;
 
-  std::vector<std::vector<int32_t>> table_;
+  std::vector<std::vector<float>> table_;
 
-  std::vector<int32_t> vector_;
+  std::vector<float> vector_;
 
   std::vector<int32_t> column_labels_;
 

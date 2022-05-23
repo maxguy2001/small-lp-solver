@@ -15,8 +15,8 @@ class Formatter{
   void clearAll();
 
 
-  std::vector<std::vector<int32_t>> formattedMatrix_;
-  std::vector<int32_t> formattedVector_;
+  std::vector<std::vector<float>> formattedMatrix_;
+  std::vector<float> formattedVector_;
 
   private:
   

@@ -1,6 +1,7 @@
 #include "primal_tableau.hpp"
 #include "../utils/formatter.hpp"
 #include <iostream>
+#include <algorithm>
 
 namespace solvers{
 
@@ -26,6 +27,23 @@ void Primal::initialiseBasis(){
   }
 }
 
+void Primal::doIteration(){
+  
+  //find most negative value in negative cost vector
+  std::vector<float> cost = table_.at(0);
+  int32_t min_index = std::min_element(cost.begin(), cost.end()) - cost.end();
+}
+
+bool Primal::checkOptimal(){
+  //check if all values in negative cost function are positive
+  std::vector<float> cost = table_.at(0);
+  for (size_t i = 0; i < cost.size(); ++i){
+    if(cost.at(i) < 0){
+      return false;
+    }
+  }
+  return true;
+}
 
 
 void Primal::solve(std::string path_to_problem_file){
