@@ -29,6 +29,12 @@ namespace solvers{
  */
   bool checkOptimal();
 
+/**
+ * @brief get optimal value
+ * 
+ */
+  bool getOptimalValue();
+
   /**
  * @brief initialised basis variables
  * 

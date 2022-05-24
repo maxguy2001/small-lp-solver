@@ -144,6 +144,9 @@ void Formatter::addObjectiveFunction(){
   }
 
   formattedMatrix_.insert(formattedMatrix_.begin(), objective_vector);
+
+  //add zero to start of formatted vector
+  formattedVector_.insert(formattedVector_.begin(), 0);
 }
 
 
